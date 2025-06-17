@@ -2,10 +2,14 @@
 
 A simple agent to monitor Azure.
 
-This collector has a single check: `backup` and two types: `jobs` and `agent`.
+This collector has a two checks:
+- `backup` with one type: `jobs`.
+- `agent` with one type: `agent`.
 
 
-## Type: jobs
+## Check: backup
+
+### Type: jobs
 
 This type is **required** and may have multiple items.
 
@@ -19,13 +23,14 @@ Duration                | float   | yes      | Total duration in seconds of the 
 BackupManagentmentType  | string  | no       | Backup Management type.
 
 
-## Type agent
+## Check: agent
 
-This type is **optional** and is given, it must have exactly one item.
+### Type: agent
+
+This type is **required** and it must have exactly one item. There is an `max` age configured for this check.
 
 Metric    | Type    | Required | Description
 --------- | ------- | -------- | -----------
 name      | string  | yes      | Name of the agent. (`azurescript`)
 info      | string  | no       | Free format info.
 version   | string  | no       | Version of the agent/script.
-# azurescript-agent
