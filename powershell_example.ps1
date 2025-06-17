@@ -68,7 +68,6 @@ $body = @{
     version = $version
 } | ConvertTo-Json -Compress -Depth 5
 
-write-host $body
 Invoke-RestMethod -Uri $uriBackup -Method Post -Headers $headers -Body $body
 
 # Finally, write the `agent` check
@@ -86,5 +85,4 @@ $body = @{
     version = $version
 } | ConvertTo-Json -Compress -Depth 5
 
-write-host $body
 Invoke-RestMethod -Uri $uriAgent -Method Post -Headers $headers -Body $body
