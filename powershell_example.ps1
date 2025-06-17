@@ -61,6 +61,11 @@ foreach ($job in $latestJobs) {
     }
 }
 
+$headers = @{
+    'Content-Type' = 'application/json'
+    'Authorization' = 'Bearer {0}' -f $token
+}
+
 $body = @{
     data = @{
         jobs = $items
