@@ -1,7 +1,7 @@
 # Powershell example:
 
 # Make sure the `azurescript` collector is assigned to the asset
-# and the `backup` check is enabled before running this script
+# and both the `backup` and `agent` check are enabled before running this script
 
 # Asset ID
 $assetId = 123  # REPLACE WITH YOUR ASSET ID
